@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.movie-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 275px;
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-details {
+  padding: 16px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.movie-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2c3e50;
+  width: 65%;
+}
+
+.vote-average {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+.info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.info-group.right {
+  align-items: flex-end;
+}
+
+.info-label {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.info-value {
+  color: #34495e;
+  font-weight: 500;
+}
+

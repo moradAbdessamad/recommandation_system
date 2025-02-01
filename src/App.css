@@ -1,0 +1,365 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: row;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.toggle-container {
+  width: 40px;
+  background-color: #fff;
+  border-right: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  flex-shrink: 0;
+  height: 100vh;
+  overflow-y: auto;
+  /* border: 1px solid green; */
+  position: fixed;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.toggle-button:hover {
+  color: #333;
+}
+
+.history-sidebar {
+  width: 290px;
+  height: 100vh;
+  background-color: #fff;
+  padding: 20px;
+  border-right: 1px solid #e5e5e5;
+  overflow-y: auto;
+  flex-shrink: 0;
+  transition: width 0.3s ease, padding 0.3s ease;
+  /* border: 1px solid red; */
+}
+
+.history-sidebar.closed {
+  width: 0;
+  padding: 0;
+  border-right: none;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  max-width: 62%;
+  margin: 0 auto;
+  transition: margin-left 0.3s ease;
+  /* border: 1px solid yellow; */
+}
+
+.history-section {
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.history-section h3 {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.history-item {
+  background-color: #e6f5ec;
+  padding: 10px;
+  margin: 2px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  color: #333;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-item:hover {
+  background-color: #f0f0f0;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.recommendation-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  width: 95%;
+  /* border: 1px solid red; */
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+  width: 60%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.image-upload {
+  margin-bottom: 15px;
+}
+
+.image-upload input[type="file"] {
+  display: none;
+}
+
+.image-upload label {
+  display: inline-block;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.image-upload label:hover {
+  background-color: #e0e0e0;
+}
+
+button {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+.results {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+  border-radius: 10px;
+}
+
+.method-selection {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.recent-history-text-container, .recent-history-poster-container {
+  border: 1px solid red;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  row-gap: 10px;
+}
+
+.history-poster {
+  border: 1px solid #666;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 4px 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.history-poster:hover {
+  color: #333;
+  cursor: pointer;
+}
+
+.home-link {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.home-link h2 {
+  transition: color 0.3s ease-in-out; 
+}
+
+.home-link:hover h2 {
+  color: #666; 
+}
+
+.movie-details-container {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid green; */
+  width: 100%;
+  align-items: center;
+}
+
+.movie-details-header {
+  margin-top: 50px;
+}
+
+.movie-details-card {
+  /* border: 1px solid red; */
+  width: 70%;
+}
+
+/* single card style  */
+
+.movie-card-single {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  margin: 20px auto;
+}
+
+.left-side-single {
+  width: 33%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-side-single {
+  width: 67%;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.poster-single {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.title-single {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+}
+
+.subtitle-single {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.duration-single {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #e5e7eb;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.genres-single {
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.genre-single {
+  font-size: 12px;
+  color: #6b7280;
+  margin-right: 8px;
+}
+
+.description-single {
+  font-size: 14px;
+  color: #4b5563;
+  position: relative;
+  z-index: 1;
+}
+
+.background-image-single {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+}
+
+.glow-effect-single {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 128px;
+  height: 128px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.2) 0%, rgba(251, 146, 60, 0.2) 100%);
+  border-radius: 50%;
+  filter: blur(24px);
+}
+
+@media (max-width: 600px) {
+  .movie-card-single {
+    flex-direction: column;
+  }
+
+  .left-side-single,
+  .right-side-single {
+    width: 100%;
+  }
+}
+
